@@ -219,7 +219,7 @@ cmd({
                     url: anu.thumbnail,
                 },
                 caption: `
-╭─┈ ⋞ 〈 Xʟɪᴄᴏɴ-Mᴜʟᴛɪᴅᴇᴠɪᴄᴇ 🦄〉 ⋟ ┈─╗
+╭─┈ ⋞ 〈 julin-Mᴜʟᴛɪᴅᴇᴠɪᴄᴇ 🦄〉 ⋟ ┈─╗
 ﹀
 ⌲🎐 *Youtube Player* ✅
 ⌲🐉 *Title:* ${anu.title}
@@ -402,7 +402,7 @@ cmd({
         },
         async(Void, citel, text) => {
             let yts = require("secktor-pack");
-            if (!text) return citel.reply(`Example : ${prefix}yts WhatsApp Bot by •xʟɪᴄᴏɴ271-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ•`);
+            if (!text) return citel.reply(`Example : ${prefix}yts WhatsApp Bot by •julin-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ•`);
             let search = await yts(text);
             let textt = "*YouTube Search*\n Result From " + text + "\n   ─────────────────── \n";
             let no = 1;
@@ -622,9 +622,9 @@ cmd({
 
 
 
-// By @•xʟɪᴄᴏɴ271-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ•
-// https://wa.me/8801853262586
-// https://www.youtube.com/@suhailtechinfo0
+// By @•julin4real-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ•
+// https://wa.me/19543371477
+// https://www.youtube.com/@Anitum
 
 
 
