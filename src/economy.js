@@ -3,10 +3,10 @@
  Licensed under the  GPL-3.0 License;
  You may not use this file except in compliance with the License.
  It is supplied in the hope that it may be useful.
- * @project_name : XLICON-MD
+ * @project_name : julin-MD
  * @author : salmanytofficial <https://github.com/jayjay-ops>
  * @modified by : @salmanytofficial <https://github.com/salmanytofficial/XLICON-MD>
- * @description : XLICON,A Multi-functional whatsapp bot.
+ * @description : julin,A Multi-functional whatsapp bot.
  * @version 0.0.6
  **/
 
@@ -32,7 +32,7 @@
      async(Void, citel, text,{ isCreator }) => {
         let zerogroup = (await sck.findOne({ id: citel.chat,})) || (await new sck({ id: citel.chat,  }) .save());
         let mongoschemas = zerogroup.economy || "false";
-        if (mongoschemas == "false") return citel.reply("*🚦Economy* is not active in current group.");
+        if (mongoschemas == "false") return citel.reply("*🚦Economy* is not active in current group baby.");
          if (!citel.isGroup) return citel.reply(tlang().group);
 	const daily  = await eco.daily(citel.sender, "secktor", 2000); //give 500 for daily, can be changed
 	 if (daily.cd) { //cdL is already formatted cooldown Left
@@ -58,7 +58,7 @@
             })
             .save());
         let mongoschemas = zerogroup.economy || "false";
-        if (mongoschemas == "false") return citel.reply("*🚦Economy* is not active in current group.");
+        if (mongoschemas == "false") return citel.reply("*🚦Economy* is not active in current group babe.");
 	 if(!isCreator) return citel.reply(tlang().owner)
         let users = citel.mentionedJid ? citel.mentionedJid[0] : citel.msg.contextInfo.participant || false;
 	if(!users) return citel.reply('Please give me user.')
