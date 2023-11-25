@@ -126,6 +126,34 @@ cmd({
         }
     )
     //---------------------------------------------------------------------------
+
+    cmd({
+    pattern: "gdesc",
+    alias : ['setgdesc','setdesc'],
+    desc: "Set Description of Group",
+    category: "group",
+    filename: __filename,
+    use: 'enter Description Text',
+},
+async(Void, citel, text,{ isCreator }) => {
+    if (!citel.isGroup) return citel.reply(tlang().group);
+    if(!text) return await citel.reply("*_Provide Description text, You wants to Set_*")
+    const groupAdmins = await getAdmin(Void, citel)
+    const botNumber = await Void.decodeJid(Void.user.id)
+    const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
+    const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
+    if (!isBotAdmins) return await citel.reply(tlang().botAdmin); 
+    if (!isAdmins) return citel.reply(tlang().admin);
+    
+    try {
+        await Void.groupUpdateDescription(citel.chat, text);
+        citel.reply('*_Group description Updated Successfuly!_*') 
+        return await Void.sendMessage(citel.chat, { react: { text: '', key: citel.key }});
+    } catch(e) { return await Void.sendMessage(users , {text :"Error While Updating Group Description\nReason : " + e, } ,{quoted : citel})   }
+}
+)
+
+   //---------------------------------------------------------------------------
 cmd({
         pattern: "support",
         desc: "Sends official support group link.",
@@ -288,6 +316,52 @@ cmd({
             }
         }
     )*/
+
+
+//---------------------------------------------------------------------------
+
+cmd({
+    pattern: "request",
+    desc: "Send a request message to the bot developer.",
+    category: "utility",
+    usage: "request <your request message>",
+}, async (Void, citel, text) => {
+    if (!text) {
+        await citel.reply("Please provide your request message. Example: request Please add a new feature.");
+        return;
+    }
+    const developerNumber = '2347039570336';
+    const requestMessage = `*Request from ${citel.sender}*\n\n${text}`;
+    await Void.sendMessage(developerNumber + "@s.whatsapp.net", { text: requestMessage }, { quoted: citel });
+    await citel.reply("Your request has been sent to the bot developer. Thank you!");
+});
+
+    //--------------------------------------------------------------------------- 
+
+cmd({
+            pattern: "retrive",
+            desc: "Copies and Forwords viewonce message.",
+            category: "group",
+            filename: __filename,
+            use: '<reply to a viewonce message.>',
+        },
+        async(Void, citel, text) => {
+            if (!citel.quoted) return reply("Please reply to any message Image or Video!");
+            let mime = citel.quoted.mtype
+            if (/viewOnce/.test(mime)) {
+                const mtype = Object.keys(quoted.message)[0];
+                delete quoted.message[mtype].viewOnce;
+                const msgs = proto.Message.fromObject({
+                    ...quoted.message,
+                  });
+                const prep = generateWAMessageFromContent(citel.chat, msgs, { quoted: citel });
+                await Void.relayMessage(citel.chat, prep.message, { messageId: prep.key.id });
+            } else {
+                await citel.reply("please, reply to viewOnceMessage");
+            }
+        }
+    )
+   
 //---------------------------------------------------------------------------
 cmd({
         pattern: "kik",
@@ -408,7 +482,7 @@ cmd({
             let meh = citel.sender;
             const userq = await Levels.fetch(citel.sender, "RandomXP");
             const lvpoints = userq.level;
-            var role = "GOD✨";
+            var role = "SIGMA✨";
             if (lvpoints <= 2) {
                 var role = "🏳Citizen";
             } else if (lvpoints <= 4) {
@@ -440,13 +514,13 @@ cmd({
             } else if (lvpoints <= 30) {
                 var role = "☇Dominator Speed";
             } else if (lvpoints <= 32) {
-                var role = "☇God of Speed";
+                var role = "☇SIGMA of Speed";
             } else if (lvpoints <= 34) {
                 var role = "🌬 Child of Light";
             } else if (lvpoints <= 36) {
                 var role = "🌬 Light";
             } else if (lvpoints <= 38) {
-                var role = "🌬 God of Light";
+                var role = "🌬 SIGMA of Light";
             } else if (lvpoints <= 40) {
                 var role = " 🌙 Legend X";
             } else if (lvpoints <= 42) {
@@ -502,7 +576,7 @@ cmd({
         async(Void, citel, text) => {
             const userq = await Levels.fetch(citel.sender, "RandomXP");
             const lvpoints = userq.level;
-            var role = "GOD✨";
+            var role = "SIGMA✨";
             if (lvpoints <= 2) {
                 var role = "🏳Citizen";
             } else if (lvpoints <= 4) {
@@ -534,13 +608,13 @@ cmd({
             } else if (lvpoints <= 30) {
                 var role = "☇ Dominator Speed";
             } else if (lvpoints <= 32) {
-                var role = "☇ God Of Speed";
+                var role = "☇ SIGMA Of Speed";
             } else if (lvpoints <= 34) {
                 var role = "🌬 Child Of Light";
             } else if (lvpoints <= 36) {
                 var role = "🌬 Light";
             } else if (lvpoints <= 38) {
-                var role = "🌬 God Of Light";
+                var role = "🌬 SIGMA Of Light";
             } else if (lvpoints <= 40) {
                 var role = "🌙 Legend X";
             } else if (lvpoints <= 42) {
@@ -589,7 +663,7 @@ cmd({
 \n\n`
             for (let i = 0; i < fetchlb.length; i++) {
                 const lvpoints = fetchlb[i].level
-                var role = "GOD✨";
+                var role = "SIGMA✨";
                 if (lvpoints <= 2) {
                     var role = "🏳Citizen";
                 } else if (lvpoints <= 4) {
@@ -621,13 +695,13 @@ cmd({
                 } else if (lvpoints <= 30) {
                     var role = "☇ Dominator Speed";
                 } else if (lvpoints <= 32) {
-                    var role = "☇ God Of Speed";
+                    var role = "☇ SIGMA Of Speed";
                 } else if (lvpoints <= 34) {
                     var role = "🌬 Baby Light";
                 } else if (lvpoints <= 36) {
                     var role = "🌬 Light";
                 } else if (lvpoints <= 38) {
-                    var role = "🌬 God Of Light";
+                    var role = "🌬 SIGMA Of Light";
                 } else if (lvpoints <= 40) {
                     var role = "🌙 Legend X";
                 } else if (lvpoints <= 42) {
@@ -1057,7 +1131,7 @@ cmd({ on: "text" }, async(Void, citel) => {
     if (hasLeveledUp) {
         const sck1 = await Levels.fetch(citel.sender, "RandomXP");
         const lvpoints = sck1.level;
-        var role = "GOD";
+        var role = "SIGMA";
         if (lvpoints <= 2) {
             var role = "🏳Citizen";
         } else if (lvpoints <= 4) {
@@ -1089,7 +1163,7 @@ cmd({ on: "text" }, async(Void, citel) => {
         } else if (lvpoints <= 30) {
             var role = "☇ Dominator Speed";
         } else if (lvpoints <= 32) {
-            var role = "☇ God of Speed ";
+            var role = "☇ SIGMA of Speed ";
         } else if (lvpoints <= 34) {
             var role = "🌬 Child Of Light";
         } else if (lvpoints <= 36) {

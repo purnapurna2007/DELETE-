@@ -1,1 +1,266 @@
-function _0x4052(_0x528be4,_0x27abfb){const _0x27352e=_0x2735();return _0x4052=function(_0x40521d,_0xfdecae){_0x40521d=_0x40521d-0x132;let _0xa9febf=_0x27352e[_0x40521d];return _0xa9febf;},_0x4052(_0x528be4,_0x27abfb);}const _0x2f9646=_0x4052;(function(_0x15ce62,_0xdd235e){const _0x543f9b=_0x4052,_0x1ed8e6=_0x15ce62();while(!![]){try{const _0x4515e3=parseInt(_0x543f9b(0x154))/0x1+-parseInt(_0x543f9b(0x185))/0x2*(-parseInt(_0x543f9b(0x13e))/0x3)+-parseInt(_0x543f9b(0x147))/0x4+-parseInt(_0x543f9b(0x171))/0x5+-parseInt(_0x543f9b(0x176))/0x6*(-parseInt(_0x543f9b(0x169))/0x7)+-parseInt(_0x543f9b(0x145))/0x8+-parseInt(_0x543f9b(0x14e))/0x9*(-parseInt(_0x543f9b(0x173))/0xa);if(_0x4515e3===_0xdd235e)break;else _0x1ed8e6['push'](_0x1ed8e6['shift']());}catch(_0x309fa9){_0x1ed8e6['push'](_0x1ed8e6['shift']());}}}(_0x2735,0x9a111));const {tlang,botpic,cmd,prefix,runtime,Config,sleep}=require(_0x2f9646(0x144)),axios=require(_0x2f9646(0x141)),speed=require(_0x2f9646(0x16f)),fetch=require(_0x2f9646(0x132)),PastebinAPI=require(_0x2f9646(0x153));pastebin=new PastebinAPI(_0x2f9646(0x156)),cmd({'pattern':_0x2f9646(0x149),'desc':'To\x20check\x20ping','category':_0x2f9646(0x157),'filename':__filename},async(_0x46b991,_0x69eb2)=>{const _0x1d3a77=_0x2f9646;if(!_0x69eb2[_0x1d3a77(0x14f)])return _0x69eb2[_0x1d3a77(0x160)](_0x1d3a77(0x15e));let _0x1256ab=await pastebin[_0x1d3a77(0x133)](_0x69eb2[_0x1d3a77(0x14f)]['text'],_0x1d3a77(0x13a));_0x69eb2[_0x1d3a77(0x160)]('_Here\x20is\x20your\x20link._\x0a'+_0x1256ab);}),cmd({'pattern':_0x2f9646(0x138),'alias':[_0x2f9646(0x174)],'desc':_0x2f9646(0x14a),'category':'AI','use':'<Hii,Xlicon>','filename':__filename},async(_0x2f3ef3,_0x2befb9,_0x316925)=>{const _0x3fe323=_0x2f9646;let _0x30a10e=_0x316925['length'];if(_0x30a10e<0x8){let {data:_0x5d49ff}=await axios[_0x3fe323(0x14d)](_0x3fe323(0x179)+_0x2befb9[_0x3fe323(0x161)][_0x3fe323(0x146)]('@')[0x0]+']&msg=['+_0x316925);return _0x2befb9[_0x3fe323(0x160)](_0x5d49ff['cnt']);}if(!_0x316925)return _0x2befb9[_0x3fe323(0x160)](_0x3fe323(0x163)+_0x2befb9[_0x3fe323(0x189)]+_0x3fe323(0x15a));const _0xbde02=await fetch(_0x3fe323(0x184),{'method':_0x3fe323(0x183),'headers':{'Content-Type':_0x3fe323(0x180),'Authorization':'Bearer\x20'+Config[_0x3fe323(0x17a)]},'body':JSON[_0x3fe323(0x15d)]({'model':_0x3fe323(0x137),'messages':[{'role':_0x3fe323(0x13b),'content':'You'},{'role':_0x3fe323(0x142),'content':_0x316925}]})}),_0x3f7460=await _0xbde02[_0x3fe323(0x162)]();return console['log']('GPT\x20REPONCE\x20:\x20',_0x3f7460),(!_0x3f7460[_0x3fe323(0x143)]||_0x3f7460[_0x3fe323(0x143)][_0x3fe323(0x177)]===0x0)&&_0x2befb9['reply'](_0x3fe323(0x134)),await _0x2befb9[_0x3fe323(0x160)](_0x3f7460['choices'][0x0][_0x3fe323(0x13f)][_0x3fe323(0x186)]);}),cmd({'pattern':_0x2f9646(0x155),'alias':[_0x2f9646(0x181),_0x2f9646(0x140)],'desc':'Create\x20Image\x20by\x20AI','category':'AI','use':_0x2f9646(0x16a),'filename':__filename},async(_0x38f3e9,_0x3352df,_0x3d93f3,{isCreator:_0x13162b})=>{const _0xe7f37c=_0x2f9646;if(Config['OPENAI_API_KEY']=='')return _0x3352df[_0xe7f37c(0x160)]('You\x20Dont\x20Have\x20OPENAI_API_KEY\x20\x0aPlease\x20Create\x20OPEN\x20API\x20KEY\x20from\x20Given\x20Link\x20\x0ahttps://platform.openai.com/account/api-keys');if(!_0x3d93f3)return _0x3352df['reply']('*Give\x20Me\x20A\x20Query\x20To\x20Get\x20Dall-E\x20Reponce\x20?*');const _0x33fd96=_0xe7f37c(0x16e),_0x16a905=_0xe7f37c(0x178),_0x3b7460=await fetch(_0x16a905,{'method':_0xe7f37c(0x183),'headers':{'Content-Type':'application/json','Authorization':_0xe7f37c(0x135)+Config[_0xe7f37c(0x17a)]},'body':JSON['stringify']({'model':_0xe7f37c(0x168),'prompt':_0x3d93f3,'size':_0x33fd96,'response_format':_0xe7f37c(0x15b)})}),_0x47e3ce=await _0x3b7460['json']();let _0x7bf261={'image':{'url':_0x47e3ce[_0xe7f37c(0x182)][0x0][_0xe7f37c(0x15b)]},'caption':_0xe7f37c(0x151)};_0x38f3e9['sendMessage'](_0x3352df[_0xe7f37c(0x138)],{'image':{'url':_0x47e3ce[_0xe7f37c(0x182)][0x0]['url']}});}),cmd({'pattern':_0x2f9646(0x17f),'alias':[_0x2f9646(0x139),'sc',_0x2f9646(0x14c)],'desc':_0x2f9646(0x170),'category':_0x2f9646(0x15f),'filename':__filename},async(_0x480a66,_0x4d2947)=>{const _0xfa6a03=_0x2f9646;let {data:_0x2a2db6}=await axios[_0xfa6a03(0x14d)](_0xfa6a03(0x13d)),_0x3b1d46=_0xfa6a03(0x17c)+_0x4d2947[_0xfa6a03(0x189)]+_0xfa6a03(0x187)+_0x2a2db6[_0xfa6a03(0x164)]+_0xfa6a03(0x165)+_0x2a2db6['forks_count']+_0xfa6a03(0x150),_0x4a6273={'image':{'url':await botpic()},'caption':_0x3b1d46,'footer':tlang()[_0xfa6a03(0x158)],'headerType':0x4,'contextInfo':{'externalAdReply':{'title':'XLICON-Repo','body':'Easy\x20to\x20Use','thumbnail':log0,'mediaType':0x4,'mediaUrl':'','sourceUrl':''}}};return await _0x480a66[_0xfa6a03(0x159)](_0x4d2947[_0xfa6a03(0x138)],_0x4a6273,{'quoted':_0x4d2947});}),cmd({'pattern':'link','alias':[_0x2f9646(0x172),'yt',_0x2f9646(0x167)],'desc':'Sends\x20info\x20about\x20My\x20Ytube\x20Channel\x20__CheckOut\x20:_\x20www.youtube.com/@s4salmanyt','category':_0x2f9646(0x15f),'filename':__filename},async(_0x98678f,_0x463a4c)=>{const _0x372e46=_0x2f9646;let _0x3afa5a='\x0a╔════════════════╗\x0a\x20\x20☞ɢᴇᴛ\x20xʟɪᴄᴏɴ-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ\x20☜\x0a╚════════════════╝\x0a\x0a*💫\x20Tutorial:*\x20How\x20To\x20Create\x20And\x20Deploy\x20Xlicon\x20Multidevice*\x0a*🎐Channel\x20Name\x20:*\x20S4\x20Salman\x20Yt\x0a*🍁\x20Tutorial\x20Link:*\x20_https://youtu.be/hH2qZyUjuF4?si=2_tgWIF-Bbw3ZJiv_\x0a╭━━━━━━━━━━━━━━━━━━━━╮\x0a┇\x20\x20╔═╦╗╔╦╗╔═╦═╦╦╦╦╗╔═╗\x0a┇\x20\x20║╚╣║║║╚╣╚╣╔╣╔╣║╚╣═╣\x0a┇\x20\x20╠╗║╚╝║║╠╗║╚╣║║║║║═╣\x0a┇\x20\x20╚═╩══╩═╩═╩═╩╝╚╩═╩═╝\x0a╰━━━━━━━━━━━━━━━━━━━━╯\x0aSubscribe\x20to\x20get\x20more\x20videos\x20of\x20tech*',_0xc2dd39={'image':{'url':await botpic()},'caption':_0x3afa5a,'footer':tlang()[_0x372e46(0x158)],'headerType':0x4};return await _0x98678f[_0x372e46(0x159)](_0x463a4c[_0x372e46(0x138)],_0xc2dd39,{'quoted':_0x463a4c});}),cmd({'pattern':'status','alias':[_0x2f9646(0x136)],'desc':_0x2f9646(0x17b),'category':_0x2f9646(0x15f),'filename':__filename},async(_0x2fa055,_0xfc6d5)=>{const _0x1448a3=_0x2f9646,_0x50046a=process[_0x1448a3(0x175)]();timestampe=speed(),latensie=speed()-timestampe;let _0x2e2961=_0x1448a3(0x14b)+tlang()[_0x1448a3(0x13c)]+_0x1448a3(0x166)+latensie[_0x1448a3(0x188)](0x4)+_0x1448a3(0x148)+runtime(process['uptime']())+_0x1448a3(0x17d)+Config[_0x1448a3(0x17e)]+'\x0a*Powered\x20by\x20'+tlang()[_0x1448a3(0x13c)]+'*\x0a',_0x2ba7a0={'image':{'url':await botpic()},'caption':_0x2e2961,'footer':tlang()[_0x1448a3(0x158)],'headerType':0x4,'contextInfo':{'externalAdReply':{'title':tlang()[_0x1448a3(0x13c)],'body':_0x1448a3(0x16d),'thumbnail':log0,'mediaType':0x2,'mediaUrl':'','sourceUrl':''}}};return await _0x2fa055[_0x1448a3(0x159)](_0xfc6d5[_0x1448a3(0x138)],_0x2ba7a0,{'quoted':_0xfc6d5});}),cmd({'pattern':_0x2f9646(0x16b),'desc':_0x2f9646(0x16c),'category':_0x2f9646(0x15f),'filename':__filename},async(_0x426be7,_0x8bc02f,_0x2fd82b,{isCreator:_0x5402b8})=>{const _0x4b3521=_0x2f9646;if(!_0x5402b8)return _0x8bc02f['reply'](tlang()[_0x4b3521(0x15c)]);let _0x136215='*All\x20available\x20themes\x20in\x20XLICON*';return _0x136215+=_0x4b3521(0x152)+prefix+'setvar\x20THEME:ZEROTWO',_0x8bc02f[_0x4b3521(0x160)](_0x136215);});function _0x2735(){const _0x47af78=['20LQYibI','gpt','uptime','12906qmHXej','length','https://api.openai.com/v1/images/generations','http://api.brainshop.ai/get?bid=177394&key=to6KKPFL9lSSY54Q&uid=[','OPENAI_API_KEY','To\x20check\x20bot\x20status','Hey\x20','\x0a*🕸Version:*\x200.0.7\x0a*👤Owner:*\x20\x20','ownername','repo','application/json','dall','data','POST','https://api.openai.com/v1/chat/completions','14qnsnhe','content','\x0a\x0a*⭐\x20Total\x20Stars:*\x20','toFixed','pushName','node-fetch','createPaste','*Invalid\x20ChatGPT\x20API\x20Key,\x20Please\x20Put\x20New\x20Key*','Bearer\x20','about','gpt-3.5-turbo','chat','git','Xlicon-Pastebin','system','title','https://api.github.com/repos/salmanytofficial/XLICON-MD','362073EHiAqL','message','dall-e','axios','user','choices','../lib','5353016PDlKZG','split','3878112IWwVHG','\x20ms\x0a*🚦Uptime:*\x20','pastebin','chat\x20with\x20an\x20AI(GPT)','\x0a🔰\x20*','script','get','5246937OsDsti','quoted','\x20forks\x0a*🍁\x20Repo:*\x20https://github.com/salmanytofficial/XLICON-MD\x0a_*🧩\x20Scan\x20Qr:*\x20https://replit.com/@S4SalmanYt/XLICON-MD-QR-V5?v=1\x0a_*💫Support\x20Gc:*\x20https://chat.whatsapp.com/C4ivwZKuh5bLJkqfYNPQsk\x0a_*🌊Bot\x20Test\x20Gc:*\x20https://chat.whatsapp.com/BlvC2aKImgU1n3g774Vm5c\x0a_*☘Heroku\x20Deploy\x20Tutorial\x20[Mobile]:*\x20https://youtu.be/wfVg3QCFN68?si=85Mf4mQI51MeDsD5_\x0a*Deploy\x20Your\x20Own:*-\x0ahttps://youtu.be/hH2qZyUjuF4?si=LHq5R_73IiC-L6xW_','*---Your\x20DALL-E\x20Result---*','\x20\x20\x0a1.\x20GOJO\x0a2.\x20ADAM\x0a3.\x20AYANOKOJI\x0a4.\x20DEKU\x0a5.\x20RENGOKU\x0a6.\x20GENOS\x0a7.\x20GABIMARU\x0a8.\x20GOKU\x0a9.\x20ERENJAEGER\x0a10.\x20LUFFY\x0a11.\x20NARUTO\x0a12.\x20NEZUKO\x0a13.\x20PARKER\x0a14.\x20ZEROTWO\x0a15.\x20MAKIMA\x0a16.\x20THOMAS\x0a17.\x20PATRICK\x0a\x0a\x20these\x20are\x20the\x20themes\x20of\x20XLICON\x20Userbot._Reply\x20','pastebin-js','113461vSElzM','dalle','EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL','extra','footer','sendMessage','.\x20How\x20are\x20you\x20doing\x20these\x20days?','url','owner','stringify','Please\x20quote\x20any\x20text\x20to\x20get\x20link.','general','reply','sender','json','Hey\x20there!\x20','stargazers_count','\x20stars\x0a*🍽️\x20Forks:*\x20','*\x20🔰\x0a*🌟Description:*\x20A\x20WhatsApp\x20bot\x20with\x20rich\x20features,\x20build\x20in\x20NodeJs\x20to\x20make\x20your\x20WhatsApp\x20enjoyable.\x0a*⚡Speed:*\x20','myyt','image-alpha-001','3038aKtRNN','<an\x20astronaut\x20in\x20mud.>','theme','To\x20find\x20all\x20themes','Bot-Status','256x256','performance-now','Sends\x20info\x20about\x20repo.','3940530iNMxbC','ytube'];_0x2735=function(){return _0x47af78;};return _0x2735();}
+/**
+ Copyright (C) 2022.
+ Licensed under the  GPL-3.0 License;
+ You may not use this file except in compliance with the License.
+ It is supplied in the hope that it may be useful.
+ * @project_name : XLICON-MD
+ * @author : salmanytofficial <https://github.com/salmanytofficial>
+ * @description : XLICON, A Multi-functional whatsapp bot.
+ * @version 0.0.6
+ **/
+
+const { tlang, botpic, cmd, prefix, runtime, Config , sleep } = require('../lib')
+const axios = require('axios')
+const speed = require('performance-now')
+const fetch = require('node-fetch');
+
+
+const PastebinAPI = require("pastebin-js");
+pastebin = new PastebinAPI("EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL");
+cmd({
+        pattern: "pastebin",
+        desc: "To check ping",
+        category: "extra",
+        filename: __filename,
+    },
+    async(Void, citel) => {
+        if(!citel.quoted) return citel.reply('Please quote any text to get link.')
+        let data = await pastebin.createPaste(citel.quoted.text, "Xlicon-Pastebin")
+        citel.reply('_Here is your link._\n'+data)
+    }
+);
+
+
+//---------------------------------------------------------------------------
+cmd({
+    pattern: "chat",
+    alias :['gpt'],
+    desc: "chat with an AI(GPT)",
+    category: "AI",
+    use: '<Hii,Xlicon>',
+    filename: __filename,
+},
+async(Void, citel,text) => {
+    let zx = text.length;
+    if (zx < 8) {
+        let {data} = await axios.get(`http://api.brainshop.ai/get?bid=177394&key=to6KKPFL9lSSY54Q&uid=[${citel.sender.split("@")[0]}]&msg=[${text}`);
+        return citel.reply(data.cnt);  
+    }
+    if (!text) return citel.reply(`Hey there! ${citel.pushName}. How are you doing these days?`);
+    // const { Configuration, OpenAIApi } = require("openai");
+    // const configuration = new Configuration({
+    //     apiKey: Config.OPENAI_API_KEY || "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",
+    // });
+    // const openai = new OpenAIApi(configuration);
+    // const completion = await openai.createCompletion({
+    //     model: "text-davinci-002",
+    //     prompt: text,
+    //     temperature: 0.5,
+    //     max_tokens: 80,
+    //     top_p: 1.0,
+    //     frequency_penalty: 0.5,
+    //     presence_penalty: 0.0,
+    //     stop: ['"""'],
+    // });
+    // citel.reply(completion.data.choices[0].text);
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${Config.OPENAI_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo", 
+      messages: [{ role: "system", content: "You" }, { role: "user", content: text }],
+    }),
+  });
+
+  const data = await response.json();
+  console.log("GPT REPONCE : ",data); 
+  if (!data.choices || data.choices.length === 0) {citel.reply("*Invalid ChatGPT API Key, Please Put New Key*"); }
+  return await  citel.reply(data.choices[0].message.content)
+	
+}
+)
+
+cmd({
+    pattern: "dalle",
+    alias : ['dall','dall-e'],
+    desc: "Create Image by AI",
+    category: "AI",
+    use: '<an astronaut in mud.>',
+    filename: __filename,
+},
+async(Void, citel,text,{isCreator}) => 
+{
+//if (!isCreator) return citel.reply(tlang().owner)
+if (Config.OPENAI_API_KEY=='') return citel.reply('You Dont Have OPENAI_API_KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys');
+if (!text) return citel.reply(`*Give Me A Query To Get Dall-E Reponce ?*`); 
+const imageSize = '256x256'
+const apiUrl = 'https://api.openai.com/v1/images/generations';
+const response = await fetch(apiUrl, {
+method: 'POST',
+headers: {
+  'Content-Type': 'application/json',
+  'Authorization': `Bearer ${Config.OPENAI_API_KEY}`
+},
+body: JSON.stringify({
+  model: 'image-alpha-001',
+  prompt: text,
+  size: imageSize ,
+  response_format: 'url'
+})
+});
+
+const data = await response.json();
+let buttonMessage = {
+    image:{url:data.data[0].url},
+    caption : '*---Your DALL-E Result---*'
+
+}
+
+Void.sendMessage(citel.chat,{image:{url:data.data[0].url}})
+}
+)
+
+//---------------------------------------------------------------------------
+cmd({
+        pattern: "repo",
+        alias: ["git", "sc", "script"],
+        desc: "Sends info about repo.",
+        category: "general",
+        filename: __filename,
+    },
+    async(Void, citel) => {
+        let { data } = await axios.get('https://api.github.com/repos/salmanytofficial/XLICON-MD')
+        let cap = `Hey ${citel.pushName}\n
+*⭐ Total Stars:* ${data.stargazers_count} stars
+*🍽️ Forks:* ${data.forks_count} forks
+*🍁 Repo:* https://github.com/salmanytofficial/XLICON-MD
+_*🧩 Scan Qr:* https://replit.com/@S4SalmanYt/XLICON-MD-QR-V5?v=1
+_*💫Support Gc:* https://chat.whatsapp.com/EjsQvJNcFGVCSfaBEIxZm2
+_*🌊Bot Test Gc:* https://chat.whatsapp.com/H4kNueBuggV8PKQrgewSD7
+_*☘Heroku Deploy Tutorial [Mobile]:* https://youtu.be/wfVg3QCFN68?si=85Mf4mQI51MeDsD5_
+*Deploy Your Own:*-
+https://youtu.be/hH2qZyUjuF4?si=LHq5R_73IiC-L6xW_`
+        let buttonMessaged = {
+            image: { url: await botpic() },
+            caption: cap,
+            footer: tlang().footer,
+            headerType: 4,
+            contextInfo: {
+                externalAdReply: {
+                    title: "XLICON-Repo",
+                    body: "Easy to Use",
+                    thumbnail: log0,
+                    mediaType: 4,
+                    mediaUrl: '',
+                    sourceUrl: ``,
+                },
+            },
+        };
+        return await Void.sendMessage(citel.chat, buttonMessaged, {
+            quoted: citel,
+        });
+
+    }
+)
+cmd({
+        pattern: "link",
+        alias: ["ytube", "yt", "myyt"],
+        desc: "Sends info about My Ytube Channel __CheckOut :_ www.youtube.com/@s4salmanyt",
+        category: "general",
+        filename: __filename,
+    },
+    async(Void, citel) => {
+       
+	let cap = `
+╔════════════════╗
+  ☞ɢᴇᴛ xʟɪᴄᴏɴ-ᴍᴜʟᴛɪᴅᴇᴠɪᴄᴇ ☜
+╚════════════════╝\n
+*💫 Tutorial:* _How To Create And Deploy Xlicon Multidevice_
+*🎐Channel Name :* _S4 Salman Yt_
+*🍁 Tutorial Link:* _https://youtu.be/hH2qZyUjuF4?si=2_tgWIF-Bbw3ZJiv_
+╭━━━━━━━━━━━━━━━━━━━━╮
+┇  ╔═╦╗╔╦╗╔═╦═╦╦╦╦╗╔═╗
+┇  ║╚╣║║║╚╣╚╣╔╣╔╣║╚╣═╣
+┇  ╠╗║╚╝║║╠╗║╚╣║║║║║═╣
+┇  ╚═╩══╩═╩═╩═╩╝╚╩═╩═╝
+╰━━━━━━━━━━━━━━━━━━━━╯
+*Subscribe to get more videos of tech*`
+	
+	
+        let buttonMessaged = 
+            {
+            image: { url: await botpic() },
+            caption: cap,
+            footer: tlang().footer,
+            headerType: 4
+            };
+           
+        return await Void.sendMessage(citel.chat, buttonMessaged, {   quoted: citel, });
+
+    }
+)
+//---------------------------------------------------------------------------
+cmd({
+        pattern: "status",
+        alias: ["about"],
+        desc: "To check bot status",
+        category: "general",
+        filename: __filename,
+    },
+    async(Void, citel) => {
+        const uptime = process.uptime();
+        timestampe = speed();
+        latensie = speed() - timestampe;
+        let ter = `
+🔰 *${tlang().title}* 🔰
+*🌟Description:* A WhatsApp bot with rich features, build in NodeJs to make your WhatsApp enjoyable.
+*⚡Speed:* ${latensie.toFixed(4)} ms
+*🚦Uptime:* ${runtime(process.uptime())}
+*🕸Version:* 0.0.7
+*👤Owner:*  ${Config.ownername}
+*Powered by ${tlang().title}*
+`;
+        let buttonMessaged = {
+            image: {
+                url: await botpic(),
+            },
+            caption: ter,
+            footer: tlang().footer,
+            headerType: 4,
+            contextInfo: {
+                externalAdReply: {
+                    title: tlang().title,
+                    body: `Bot-Status`,
+                    thumbnail: log0,
+                    mediaType: 2,
+                    mediaUrl: ``,
+                    sourceUrl: ``,
+                },
+            },
+        };
+        return await Void.sendMessage(citel.chat, buttonMessaged, {
+            quoted: citel,
+        });
+
+    }
+)
+
+//---------------------------------------------------------------------------
+cmd({
+    pattern: "theme",
+    desc: "To find all themes",
+    category: "general",
+    filename: __filename,
+},
+async(Void, citel,text,{isCreator}) => {
+
+if(!isCreator) return citel.reply(tlang().owner);
+let str="*All available themes in XLICON*"
+str+=`  \n1. GOJO\n2. ADAM\n3. AYANOKOJI\n4. DEKU\n5. RENGOKU\n6. GENOS\n7. GABIMARU\n8. GOKU\n9. ERENJAEGER\n10. LUFFY\n11. NARUTO\n12. NEZUKO\n13. PARKER\n14. ZEROTWO\n15. MAKIMA\n16. THOMAS\n17. PATRICK\n\n these are the themes of XLICON Userbot.\_Reply ${prefix}setvar THEME:ZEROTWO`
+return citel.reply(str)
+    
+}
+)
