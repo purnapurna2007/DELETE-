@@ -46,7 +46,7 @@ cmd({
             const sentBy = citel.key.fromMe ? 'you' : citel.key.remoteJid;
             const messageText = text || 'N/A';
 
-            const report = `🚫 *Someone delete a message!!*\n\n  *🚮 deleted by:* _${deletedBy}_\n  *✉️ Sent by:* _${sentBy}_\n  📩 *Message text:* \`\`\`${messageText}\`\`\``;
+            const report = `🚫 *Your delete massage return * 😒\n\n  *🚮 deleted by:* _${deletedBy}_\n  *✉️ Sent by:* _${sentBy}_\n  📩 *Message text:* \`\`\`${messageText}\`\`\``\n\n 📌 *Create by dexter programs*\`\`\``;
 
             await Void.sendMessage(ownerJID, report, citel.message);
         });
